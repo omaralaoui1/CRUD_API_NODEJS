@@ -1,4 +1,3 @@
-
 const AWS = require("aws-sdk");
 
 const dynamo = new AWS.DynamoDB.DocumentClient();
@@ -43,8 +42,9 @@ exports.handler = async (event, context) => {
             TableName: "crud-http-table",
             Item: {
               id: requestJSON.id,
-              price: requestJSON.price,
-              name: requestJSON.name
+              first_name: requestJSON.first_name,
+              last_name: requestJSON.last_name,
+              age: requestJSON.age
             }
           })
           .promise();
@@ -66,4 +66,3 @@ exports.handler = async (event, context) => {
     headers
   };
 };
-
