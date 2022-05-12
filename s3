@@ -1,10 +1,10 @@
 apiVersion: s3.services.k8s.aws/v1alpha1
 kind: Bucket
 metadata:
-  name: $BUCKET_NAME
+  name: my-ack-s3-bucket
 spec:
-  name: $BUCKET_NAME
+  name: my-ack-s3-bucket
   tagging:
     tagSet:
-    - key: myTagKey
-      value: myTagValue
+    - key: by
+      value: kubernetes
